@@ -1,47 +1,70 @@
-# Instruction how to send project to review
-- [Russian](https://github.com/bahtibek-an/Instruction-how-to-send-project-to-review/edit/main/README.md)
-# Frontend My Dropbox
-### What is dropbox could be a serverless app?
-This is what it's all about!
+### Project Dropbox Clone using Laravel and Vite.js
 
-### First, what is dropbox? :)
-Amazon has a free tier. You should be able to host it for 0$. :)
+## Task
+The main tasks of this project include:
 
-Dropbox is a file hosting service operated by the American company Dropbox, Inc., headquartered in San Francisco, California, that offers cloud storage, file synchronization, personal cloud, and client software.
+1. Creating a user authentication system.
+2. Implementing file upload and download functionality.
+3. Building a file management system including folder creation, deletion, and organization.
+4. Enabling file sharing with other users via secure links.
+5. Implementing real-time updates for file changes.
 
-=> File synchronization, that sounds cool!
+## Description
+This project is a Dropbox clone built using Laravel and Vite.js. It aims to provide a file storage and sharing platform similar to Dropbox, allowing users to upload, download, and share files securely. The application is built with Laravel, a powerful PHP framework, for the backend logic and Vite.js, a fast frontend tooling for Vue.js, React, and vanilla JS, for the frontend development.
 
-### Secondly, what is serverless?
-Serverless computing is a method of providing backend services on an as-used basis. Servers are still used, but a company that gets backend services from a serverless vendor is charged based on usage, not a fixed amount of bandwidth or number of servers.
+## Installation
+To install and run this project locally, follow these steps:
 
-=> We configure a backend at from a provider and it will handle the load/scaling for us.
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
 
-Let's implement a file synchronization using Amplify & Lambda & S3
+2. Navigate to the project directory:
+   ```
+   cd project-dropbox-clone
+   ```
 
-Example of architecture:
-<img src="https://storage.googleapis.com/qwasar-public/track-web/my_dropbox.jpeg"/>
+3. Install PHP dependencies using Composer:
+   ```
+   composer install
+   ```
 
+4. Install Node.js dependencies using npm or yarn:
+   ```
+   npm install
+   ```
 
-You will have to code some lambda + a frontend app.
-ReactJS will be your techno!
+5. Create a copy of the `.env.example` file and rename it to `.env`. Update the database configuration in the `.env` file with your database credentials.
 
-## SPECIFICATIONS
-User - authentification
-Upload a file
-Versioning
-DNS/Routing
+6. Generate an application key:
+   ```
+   php artisan key:generate
+   ```
 
-## REQUIREMENTS
-A fully hosted version in the cloud. (at least until the correction happened)
+7. Run migrations to create the necessary database tables:
+   ```
+   php artisan migrate
+   ```
 
-The url of your project will be store inside the readme.
+8. Start the Laravel development server:
+   ```
+   php artisan serve
+   ```
 
-No more than 1 components per file.
-Additionals components will be in `src/components/`
+9. In a separate terminal window, start the Vite.js development server:
+   ```
+   npm run dev
+   ```
 
-CSS will be in a file associated to the component: css for ExampleComponent.js will be in ExampleComponent.css.
+10. Access the application in your web browser at `http://localhost:8000`.
 
-Your Readme will have to describe the project.
-Your .gitignore must remove node_modules/
+## Usage
+Once the application is set up and running, you can perform the following actions:
 
-On the css/colors/design, you can be creative.
+1. Register a new account or login with existing credentials.
+2. Upload files by navigating to the upload section and selecting the desired files.
+3. Create folders to organize your files.
+4. Share files with other users by generating secure links.
+5. Download files or view them directly in the browser.
+6. Manage your files and folders efficiently using the provided interface.
